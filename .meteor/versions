@@ -28,7 +28,7 @@ coffeescript@1.0.17
 dburles:collection-helpers@1.0.4
 dburles:spacebars-tohtml@1.0.1
 ddp@1.2.5
-ddp-client@1.2.6
+ddp-client@1.2.7
 ddp-common@1.2.5
 ddp-rate-limiter@1.0.4
 ddp-server@1.2.6
@@ -67,14 +67,14 @@ meteor-base@1.0.4
 meteorhacks:fast-render@2.13.0
 meteorhacks:inject-data@2.0.0
 meteorhacks:inject-initial@1.0.4
-meteorhacks:kadira@2.28.5
+meteorhacks:kadira@2.28.7
 meteorhacks:meteorx@1.4.1
 meteorhacks:picker@1.0.3
 meteorhacks:subs-manager@1.6.4
 meteorhacks:unblock@1.1.0
 minifier-css@1.1.11
 minifier-js@1.1.11
-minimongo@1.0.15
+minimongo@1.0.16
 miro:mailchimp@1.1.0
 modules@0.6.1
 modules-runtime@0.6.3
@@ -84,6 +84,7 @@ mongo-id@1.0.4
 mongo-livedata@1.0.12
 nova:api@0.26.1-nova
 nova:base-components@0.26.1-nova
+nova:base-routes@0.26.1-nova
 nova:base-styles@0.26.1-nova
 nova:categories@0.26.1-nova
 nova:comments@0.26.1-nova
@@ -152,7 +153,7 @@ ui@1.0.11
 underscore@1.0.8
 url@1.0.9
 utilities:avatar@0.9.2
-utilities:react-list-container@0.1.8
+utilities:react-list-container@0.1.9
 utilities:smart-methods@0.1.4
 utilities:smart-publications@0.1.4
 webapp@1.2.8
