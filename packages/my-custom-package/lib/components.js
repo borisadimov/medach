@@ -1,5 +1,5 @@
 /*
-This file centralizes all our custom component overrides. 
+This file centralizes all our custom component overrides.
 */
 
 import CustomLogo from "./components/CustomLogo.jsx";

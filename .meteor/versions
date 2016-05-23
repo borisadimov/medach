@@ -1,4 +1,5 @@
 accounts-base@1.2.7
+accounts-facebook@1.0.9
 accounts-oauth@1.1.12
 accounts-password@1.1.8
 accounts-twitter@1.0.9
@@ -40,6 +41,7 @@ ecmascript-runtime@0.2.10
 ejson@1.0.11
 email@1.0.12
 es5-shim@4.5.10
+facebook@1.2.6
 fortawesome:fontawesome@4.5.0
 fourseven:scss@3.4.3
 geojson-utils@1.0.8
@@ -75,13 +77,13 @@ meteorhacks:unblock@1.1.0
 minifier-css@1.1.11
 minifier-js@1.1.11
 minimongo@1.0.16
-miro:mailchimp@1.1.0
 modules@0.6.1
 modules-runtime@0.6.3
 momentjs:moment@2.12.0
 mongo@1.1.7
 mongo-id@1.0.4
 mongo-livedata@1.0.12
+my-custom-package@0.0.0
 nova:api@0.26.1-nova
 nova:base-components@0.26.1-nova
 nova:base-routes@0.26.1-nova
@@ -99,10 +101,8 @@ nova:getting-started@0.26.1-nova
 nova:i18n@0.26.1-nova
 nova:kadira@0.26.1-nova
 nova:lib@0.26.1-nova
-nova:newsletter@0.26.1-nova
 nova:notifications@0.26.1-nova
 nova:posts@0.26.1-nova
-nova:rss@0.26.1-nova
 nova:search@0.26.1-nova
 nova:settings@0.26.1-nova
 nova:share@0.26.1-nova
@@ -112,6 +112,7 @@ npm-bcrypt@0.8.5
 npm-mongo@1.4.43
 oauth@1.1.10
 oauth1@1.1.9
+oauth2@1.1.9
 observe-sequence@1.0.11
 ongoworks:speakingurl@9.0.0
 ordered-dict@1.0.7
