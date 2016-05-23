@@ -20,7 +20,7 @@ Package.onUse(function (api) {
     'nova:share@0.26.2-nova',
 
     // third-party packages
-
+    'service-configuration',
     'lepozepo:s3',
     'fortawesome:fontawesome@4.5.0',
     'tmeasday:check-npm-versions@0.3.1',
@@ -31,6 +31,7 @@ Package.onUse(function (api) {
 
   api.addFiles([
     'lib/config.js',
+    'lib/server/methods.js',
     'lib/components.js',
   ], ['client', 'server']);
 

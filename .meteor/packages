@@ -31,8 +31,8 @@ nova:base-routes
 nova:email-templates
 
 accounts-password
-accounts-twitter
-accounts-facebook
+#accounts-twitter
+#accounts-facebook
 
 ############ Debug Packages ############
 
@@ -44,3 +44,5 @@ nova:debug
 my-custom-package
 custom-components
 lepozepo:s3
+mrt:accounts-vk
+service-configuration

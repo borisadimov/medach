@@ -1,8 +1,6 @@
 accounts-base@1.2.7
-accounts-facebook@1.0.9
 accounts-oauth@1.1.12
 accounts-password@1.1.8
-accounts-twitter@1.0.9
 aldeed:collection2@2.9.1
 aldeed:collection2-core@1.1.1
 aldeed:schema-deny@1.0.1
@@ -39,7 +37,6 @@ ecmascript-runtime@0.2.10
 ejson@1.0.11
 email@1.0.12
 es5-shim@4.5.10
-facebook@1.2.6
 fortawesome:fontawesome@4.5.0
 fourseven:scss@3.4.3
 geojson-utils@1.0.8
@@ -82,6 +79,7 @@ momentjs:moment@2.12.0
 mongo@1.1.7
 mongo-id@1.0.4
 mongo-livedata@1.0.12
+mrt:accounts-vk@0.2.0
 my-custom-package@0.0.0
 nova:api@0.26.2-nova
 nova:base-components@0.26.2-nova
@@ -110,7 +108,6 @@ nova:voting@0.26.2-nova
 npm-bcrypt@0.8.5
 npm-mongo@1.4.43
 oauth@1.1.10
-oauth1@1.1.9
 oauth2@1.1.9
 observe-sequence@1.0.11
 ongoworks:speakingurl@9.0.0
@@ -147,7 +144,6 @@ templating-tools@1.0.4
 tmeasday:check-npm-versions@0.3.1
 tmeasday:publish-counts@0.7.3
 tracker@1.0.13
-twitter@1.1.9
 ui@1.0.11
 underscore@1.0.8
 url@1.0.9
