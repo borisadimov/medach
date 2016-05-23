@@ -1,5 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 import NovaForm from "meteor/nova:forms";
+import S3 from "meteor/lepozepo:s3"
 
 import SmartContainers from "meteor/utilities:react-list-container";
 const DocumentContainer = SmartContainers.DocumentContainer;
@@ -13,11 +14,12 @@ class PostsEditForm extends Component{
   constructor() {
     super();
     this.deletePost = this.deletePost.bind(this);
+    console.log(S3)
   }
 
   deletePost() {
     const post = this.props.post;
-    if (window.confirm(`Delete post “${post.title}”?`)) { 
+    if (window.confirm(`Delete post “${post.title}”?`)) {
       Actions.call('posts.deleteById', post._id, (error, result) => {
         Messages.flash(`Post “${post.title}” deleted.`, "success");
         Events.track("post deleted", {'_id': post._id});
@@ -37,13 +39,13 @@ class PostsEditForm extends Component{
   render() {
 
     const Icon = Telescope.components.Icon;
-    
+
     return (
       <div className="posts-edit-form">
         {Users.is.admin(this.context.currentUser) ?  this.renderAdminArea() : null}
-        <DocumentContainer 
-          collection={Posts} 
-          publication="posts.single" 
+        <DocumentContainer
+          collection={Posts}
+          publication="posts.single"
           selector={{_id: this.props.post._id}}
           terms={{_id: this.props.post._id}}
           joins={Posts.getJoins()}

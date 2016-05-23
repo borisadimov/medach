@@ -1,6 +1,7 @@
 ############ Nova Core ############
 
 nova:core # do not remove!
+nova:i18n
 
 ############ Optional Packages ############
 
@@ -42,3 +43,4 @@ nova:debug
 # uncomment to activate example custom package
 my-custom-package
 custom-components
+lepozepo:s3

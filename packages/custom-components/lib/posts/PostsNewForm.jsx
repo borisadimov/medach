@@ -5,15 +5,15 @@ import { Messages } from "meteor/nova:core";
 
 import NovaForm from "meteor/nova:forms";
 
+
 const PostsNewForm = (props, context) => {
 
   ({CanCreatePost, FlashMessages} = Telescope.components);
-
   return (
     <CanCreatePost>
       <div className="posts-new-form">
-        <NovaForm 
-          collection={Posts} 
+        <NovaForm
+          collection={Posts}
           currentUser={context.currentUser}
           methodName="posts.new"
           successCallback={(post)=>{

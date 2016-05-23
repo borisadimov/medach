@@ -21,6 +21,7 @@ Package.onUse(function (api) {
 
     // third-party packages
 
+    'lepozepo:s3',
     'fortawesome:fontawesome@4.5.0',
     'tmeasday:check-npm-versions@0.3.1',
     'std:accounts-ui@1.1.12',
@@ -30,7 +31,7 @@ Package.onUse(function (api) {
 
   api.addFiles([
     'lib/config.js',
-    'lib/components.js'
+    'lib/components.js',
   ], ['client', 'server']);
 
 });

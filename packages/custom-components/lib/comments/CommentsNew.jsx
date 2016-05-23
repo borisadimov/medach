@@ -5,7 +5,6 @@ import NovaForm from "meteor/nova:forms";
 class CommentsNew extends Component {
 
   render() {
-
     let prefilledProps = {postId: this.props.postId};
 
     if (this.props.parentComment) {
@@ -18,8 +17,8 @@ class CommentsNew extends Component {
 
     return (
       <div className="comments-new-form">
-        <NovaForm 
-          collection={Comments} 
+        <NovaForm
+          collection={Comments}
           currentUser={this.context.currentUser}
           methodName="comments.new"
           prefilledProps={prefilledProps}
