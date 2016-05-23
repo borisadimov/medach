@@ -99,7 +99,6 @@ nova:getting-started@0.26.2-nova
 nova:i18n@0.26.2-nova
 nova:kadira@0.26.2-nova
 nova:lib@0.26.2-nova
-nova:newsletter@0.26.2-nova
 nova:notifications@0.26.2-nova
 nova:posts@0.26.2-nova
 nova:search@0.26.2-nova

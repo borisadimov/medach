@@ -8,7 +8,7 @@ Telescope.registerComponent("Footer",               require('./common/Footer.jsx
 // Telescope.registerComponent("Flash",                require('./common/Flash.jsx'));
 // Telescope.registerComponent('HeadTags',             require('./common/HeadTags.jsx'));
 // Telescope.registerComponent("FlashMessages",        require('./common/FlashMessages.jsx'));
-// Telescope.registerComponent("Newsletter",       require('./common/Newsletter.jsx'));
+Telescope.registerComponent("Newsletter",       require('./common/Newsletter.jsx'));
 // Telescope.registerComponent("Icon",                 require('./common/Icon.jsx'));
 // Telescope.registerComponent("SearchForm",           require('./common/SearchForm.jsx'));
 // Telescope.registerComponent("AppLoading",           require('./common/AppLoading.jsx'));
