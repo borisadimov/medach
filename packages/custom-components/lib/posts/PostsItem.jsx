@@ -66,12 +66,13 @@ class PostsItem extends Component {
 
           <div className="posts-item-meta">
             {
-              //post.user?
-              // <div className="posts-item-user">
-              //   <UsersAvatar user={post.user} size="small"/>
-              //   <UsersName user={post.user}/>
-              // </div>
-              // : null
+              // <UsersAvatar user={post.user} size="small"/>
+
+              post.user?
+               <div className="posts-item-user">
+                 <UsersName user={post.user}/>
+               </div>
+               : null
             }
             <div className="posts-item-date">{moment(post.postedAt).fromNow()}</div>
             <div className="posts-item-comments"><a href={Posts.getPageUrl(post)}>{post.commentCount}&nbsp;comments</a></div>
