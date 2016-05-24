@@ -17,14 +17,16 @@ class Newsletter extends Component {
     this.subscribeEmail = this.subscribeEmail.bind(this);
     this.subscribeUser = this.subscribeUser.bind(this);
     this.dismissBanner = this.dismissBanner.bind(this);
-
-    const showBanner =
-      !(Meteor.isClient && Cookie.get('showBanner') === "no") &&
+    const isBlockedByCookie = (Meteor.isClient && Cookie.get('showBanner') === "no")
+    var notShowBanner = !(
+      !isBlockedByCookie &&
       Users.getSetting(context.currentUser, 'newsletter_showBanner', true) &&
-      !Users.getSetting(context.currentUser, 'newsletter_subscribeToNewsletter', false);
-
+      !Users.getSetting(context.currentUser, 'newsletter_subscribeToNewsletter', false));
+    if (Meteor.isServer) {
+      notShowBanner = true;
+    }
     this.state = {
-      showBanner: showBanner
+      notShowBanner: notShowBanner
     };
   }
 
@@ -56,14 +58,14 @@ class Newsletter extends Component {
 
     if (e && e.preventDefault) e.preventDefault();
 
-    this.setState({showBanner: false});
+    this.setState({notShowBanner: true});
     Cookie.set('showBanner', 'no');
     if(this.context.currentUser){
       // if user is connected, change setting in their account
       Users.setSetting(this.context.currentUser, 'newsletter_showBanner', false);
     }else{
       // set cookie
-      Cookie.set('showBanner', "no");
+      Cookie.set('notShowBanner', "no");
     }
   }
 
@@ -93,8 +95,7 @@ class Newsletter extends Component {
     const currentUser = this.context.currentUser;
 
     ({Icon} = Telescope.components);
-
-    if (this.state.showBanner) {
+    if (!this.state.notShowBanner) {
       return (
         <div className="newsletter">
           <h4 className="newsletter-tagline">{this.props.headerText}</h4>
