@@ -57,7 +57,7 @@ class Newsletter extends Component {
     if (e && e.preventDefault) e.preventDefault();
 
     this.setState({showBanner: false});
-
+    Cookie.set('showBanner', 'no');
     if(this.context.currentUser){
       // if user is connected, change setting in their account
       Users.setSetting(this.context.currentUser, 'newsletter_showBanner', false);
