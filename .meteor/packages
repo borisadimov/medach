@@ -2,6 +2,7 @@
 
 nova:core # do not remove!
 nova:i18n
+nova:events
 
 ############ Optional Packages ############
 
