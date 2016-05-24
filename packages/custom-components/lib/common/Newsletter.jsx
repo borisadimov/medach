@@ -94,7 +94,7 @@ class Newsletter extends Component {
 
     ({Icon} = Telescope.components);
 
-    if (1==2 && this.state.showBanner) {
+    if (this.state.showBanner) {
       return (
         <div className="newsletter">
           <h4 className="newsletter-tagline">{this.props.headerText}</h4>
