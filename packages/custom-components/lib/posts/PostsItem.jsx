@@ -52,6 +52,18 @@ class PostsItem extends Component {
       return (!!post.url && post.url.indexOf('board.medach') == -1 ) ? "_blank" : "";
     };
 
+    getLink = function (post, isAbsolute) {
+      if (!!post.url) {
+        if (post.url.indexOf('board.medach') == -1) {
+          return post.url
+        } else {
+          return Telescope.utils.getOutgoingUrl(post.url)
+        }
+      } else {
+       Posts.getPageUrl(post, isAbsolute);
+     }
+    };
+
     return (
       <div className={postClass}>
 
@@ -65,7 +77,7 @@ class PostsItem extends Component {
 
           <h3 className="posts-item-title">
             <a className="posts-item-title-link"
-                href={Posts.getLink(post)}
+                href={getLink(post)}
                 target={getLinkTarget(post)}>{post.title}</a>
             {this.renderCategories()}
           </h3>
