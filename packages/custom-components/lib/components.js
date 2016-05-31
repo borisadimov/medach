@@ -72,4 +72,4 @@ Telescope.registerComponent("CommentsItem",         require('./comments/Comments
 // Telescope.registerComponent("UsersName",            require('./users/UsersName.jsx'));
 // Telescope.registerComponent("UsersMenu",            require('./users/UsersMenu.jsx'));
 // Telescope.registerComponent("UsersAccountMenu",     require('./users/UsersAccountMenu.jsx'));
-// Telescope.registerComponent("UsersAccountForm",     require('./users/UsersAccountForm.jsx'));
+Telescope.registerComponent("UsersAccountForm",     require('./users/UsersAccountForm.jsx'));

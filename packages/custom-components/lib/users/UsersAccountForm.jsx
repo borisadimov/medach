@@ -7,14 +7,16 @@ import { Accounts } from 'meteor/std:accounts-ui';
 const UsersAccountForm = () => {
   return (
     <Accounts.ui.LoginForm />
-  ) 
+  )
 };
 
 module.exports = UsersAccountForm;
 export default UsersAccountForm;
 
 // customize Accounts.ui
-
+Accounts.config({
+  sendVerificationEmail: true,
+})
 Accounts.ui.config({
   passwordSignupFields: 'USERNAME_AND_EMAIL',
   onSignedInHook: () => {},
@@ -27,7 +29,7 @@ class AccountsButton extends Accounts.ui.Button {
     if (type === 'link') {
       return <a href={ href } className={ className } onClick={ onClick }>{ label }</a>;
     }
-    return <Button 
+    return <Button
         bsStyle="primary"
         className={ className }
         type={ type } 

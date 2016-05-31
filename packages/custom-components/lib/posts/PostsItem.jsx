@@ -48,6 +48,10 @@ class PostsItem extends Component {
     // console.log(post)
     // console.log(post.user)
 
+    getLinkTarget = function (post) {
+      return (!!post.url && post.url.indexOf('board.medach') == -1 ) ? "_blank" : "";
+    };
+
     return (
       <div className={postClass}>
 
@@ -60,7 +64,9 @@ class PostsItem extends Component {
         <div className="posts-item-content">
 
           <h3 className="posts-item-title">
-            <a className="posts-item-title-link" href={Posts.getLink(post)} target={Posts.getLinkTarget(post)}>{post.title}</a>
+            <a className="posts-item-title-link"
+                href={Posts.getLink(post)}
+                target={getLinkTarget(post)}>{post.title}</a>
             {this.renderCategories()}
           </h3>
 
@@ -70,7 +76,7 @@ class PostsItem extends Component {
 
               post.user?
                <div className="posts-item-user">
-                 <UsersName user={post.user}/>
+                 <UsersName user={post.user}/>/
                </div>
                : null
             }

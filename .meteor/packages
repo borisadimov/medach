@@ -3,6 +3,10 @@
 nova:core # do not remove!
 nova:i18n
 nova:events
+nova:lib
+
+accounts-base
+accounts-password
 
 ############ Optional Packages ############
 
@@ -31,7 +35,7 @@ nova:base-styles
 nova:base-routes
 nova:email-templates
 
-accounts-password
+
 #accounts-twitter
 #accounts-facebook
 
@@ -47,3 +51,4 @@ custom-components
 lepozepo:s3
 mrt:accounts-vk
 service-configuration
+
