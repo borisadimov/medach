@@ -54,7 +54,7 @@ class PostsItem extends Component {
 
     getLink = function (post, isAbsolute) {
       if (!!post.url) {
-        if (post.url.indexOf('board.medach') == -1) {
+        if (post.url.indexOf('board.medach') > -1) {
           return post.url
         } else {
           return Telescope.utils.getOutgoingUrl(post.url)
