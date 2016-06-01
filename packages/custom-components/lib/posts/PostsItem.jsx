@@ -60,7 +60,7 @@ class PostsItem extends Component {
           return Telescope.utils.getOutgoingUrl(post.url)
         }
       } else {
-       Posts.getPageUrl(post, isAbsolute);
+       return Posts.getPageUrl(post, isAbsolute);
      }
     };
 
