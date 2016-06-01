@@ -88,7 +88,7 @@ class PostsItem extends Component {
 
               post.user?
                <div className="posts-item-user">
-                 <UsersName user={post.user}/>/
+                 <UsersName user={post.user}/>
                </div>
                : null
             }
