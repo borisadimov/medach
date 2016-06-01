@@ -25,23 +25,25 @@ Telescope.addRoutes({
 
       if (!('cat' in queryParams)) {
         selector = Telescope.utils.deepExtend(true, selector, {categories: {'$nin': ['adA768Y5BekY6RhQz']}});
+        selector = Telescope.utils.deepExtend(true, selector, {'sticky': {'$not': true}});
       }
 
-      
 
 
 
-    
-      mount(App, {content: 
-        <ListContainer 
-          collection={Posts} 
+
+
+      mount(App, {content:
+        <ListContainer
+          collection={Posts}
           publication="posts.list"
           selector={selector}
           options={options}
-          terms={queryParams} 
+          terms={queryParams}
           joins={Posts.getJoins()}
           component={PostsList}
           cacheSubscription={false}
+          limit={30}
         />})
     }
   },
@@ -60,16 +62,16 @@ Telescope.addRoutes({
     path: "/posts/:_id/:slug?",
     action(params, queryParams) {
       ({App, PostsPage} = Telescope.components);
-      mount(App, {content: 
-        <DocumentContainer 
-          collection={Posts} 
-          publication="posts.single" 
+      mount(App, {content:
+        <DocumentContainer
+          collection={Posts}
+          publication="posts.single"
           selector={{_id: params._id}}
           terms={params}
           joins={Posts.getJoins()}
           component={PostsPage}
         />});
-    }    
+    }
   },
 
   // ------------------------------------- Users -------------------------------- //
@@ -78,10 +80,10 @@ Telescope.addRoutes({
     path: "/users/:slug",
     action(params, queryParams) {
       ({App, UsersProfile} = Telescope.components);
-      mount(App, {content: 
-        <DocumentContainer 
-          collection={Users} 
-          publication="users.single" 
+      mount(App, {content:
+        <DocumentContainer
+          collection={Users}
+          publication="users.single"
           selector={{'telescope.slug': params.slug}}
           terms={{'telescope.slug': params.slug}}
           component={UsersProfile}
@@ -94,12 +96,12 @@ Telescope.addRoutes({
     path: "/account",
     action(params, queryParams) {
       ({App, UsersEdit} = Telescope.components);
-      mount(App, {content: 
-        <DocumentContainer 
-          collection={Users} 
-          publication="users.single" 
-          selector={{_id: Meteor.userId()}} 
-          terms={{_id: Meteor.userId()}} 
+      mount(App, {content:
+        <DocumentContainer
+          collection={Users}
+          publication="users.single"
+          selector={{_id: Meteor.userId()}}
+          terms={{_id: Meteor.userId()}}
           component={UsersEdit}
         />});
     }
@@ -109,16 +111,16 @@ Telescope.addRoutes({
     path: "/users/:slug/edit",
     action(params, queryParams) {
       ({App, UsersEdit} = Telescope.components);
-      mount(App, {content: 
-        <DocumentContainer 
-          collection={Users} 
-          publication="users.single" 
-          selector={params} 
-          terms={params} 
+      mount(App, {content:
+        <DocumentContainer
+          collection={Users}
+          publication="users.single"
+          selector={params}
+          terms={params}
           component={UsersEdit}
         />});
     }
-  }  
+  }
 });
 
 _.forEach(Telescope.routes, (route, routeName) => {
