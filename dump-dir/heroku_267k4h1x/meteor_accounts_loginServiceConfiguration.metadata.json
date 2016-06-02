@@ -1,1 +1,0 @@
-{"options":{},"indexes":[{"v":1,"key":{"_id":1},"name":"_id_","ns":"heroku_267k4h1x.meteor_accounts_loginServiceConfiguration"},{"v":1,"unique":true,"key":{"service":1},"name":"service_1","ns":"heroku_267k4h1x.meteor_accounts_loginServiceConfiguration"}]}
