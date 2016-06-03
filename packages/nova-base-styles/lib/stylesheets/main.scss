@@ -45,3 +45,9 @@ code{
 .posts-day h2{
   font-weight: bold;
 }
+
+body {
+  @include medium-large {
+    font-size: 14px;
+  }
+}
