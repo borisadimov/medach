@@ -1,5 +1,5 @@
 .header-wrapper{
-  background: $header-bg;
+  background: #222832;
   margin-bottom: $vmargin;
 }
 
@@ -53,6 +53,7 @@
 
 .users-account-menu, .users-menu{
   .dropdown-toggle{
+    color: #fff;
     @include flex-center;
     padding: 0;
     background: none;

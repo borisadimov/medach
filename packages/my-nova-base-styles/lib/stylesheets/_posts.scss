@@ -2,16 +2,22 @@
 //////////////////////////////////////////////////////
 // Post List                                        //
 //////////////////////////////////////////////////////
+.posts-lists-header-categories {
+  margin-right: 10px;
+}
 
 .posts-list-header{
   @include medium-large{
     @include flex-center;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
   margin-bottom: $vmargin;
+
+  padding: 20px 0;
 }
 
-.post-lists-header-categories{
+.post-lists-header-categories,
+.posts-lists-header-categories{
   @include small{
     margin: 0 auto;
     margin-bottom: $vmargin;
@@ -86,6 +92,8 @@
   @include medium-large{
     @include flex-center;
   }
+
+  align-items: flex-start;
   border-bottom: $border;
   padding: $vmargin 5px;
   // margin-bottom: 15px;
@@ -133,6 +141,8 @@
 }
 
 .posts-item-title{
+  font-weight: 400;
+
   @include small{
     margin-right: 40px;
     font-size: 1rem;
@@ -152,22 +162,37 @@
     &, &:active, &:hover{
       text-decoration: none;
     }
+
+    line-height: 30px;
+
+    @include small {
+      line-height: 25px;
+    }
   }
 }
 
 .posts-categories{
-  @include medium-large{
-    margin-left: 5px;
-  }
+  // @include medium-large{
+  //   margin-left: 5px;
+  // }
+
   @include flex-center;
   a{
     display: block;
     font-size: $small-font;
-    @include border;
     @include border-radius;
     margin-right: 5px;
     padding: 2px 6px;
-    @include activeHover;
+    color: #fff;
+    border: 1px solid transparent;
+    background-color: #0275d8;
+    border-color: #0275d8;
+  }
+
+  a:hover {
+    color: #fff;
+    background-color: #025aa5;
+    border-color: #01549b;
   }
 }
 
@@ -175,7 +200,7 @@
   @include medium-large{
     @include flex-center;
   }
-  font-size: $small-font;
+  font-size: 12px;
   .users-avatar{
     margin-right: 5px;
   }
@@ -238,11 +263,10 @@
     float: left;
   }
   display: block;
-  margin-right: $hmargin;
+  margin-right: 15px;
   img{
     display: block;
-    height: 50px;
-    width: auto;
+    max-width: 85px;
   }
 }
 

@@ -79,7 +79,6 @@ class PostsItem extends Component {
             <a className="posts-item-title-link"
                 href={getLink(post)}
                 target={getLinkTarget(post)}>{post.title}</a>
-            {this.renderCategories()}
           </h3>
 
           <div className="posts-item-meta">
@@ -96,8 +95,9 @@ class PostsItem extends Component {
             <div className="posts-item-comments"><a href={Posts.getPageUrl(post)}>{post.commentCount}&nbsp;comments</a></div>
 
             {(this.context.currentUser && this.context.currentUser.isAdmin) ?<PostsStats post={post} />:null}
-            {this.renderActions()}
+            {this.renderActions()}{this.renderCategories()}
           </div>
+
 
         </div>
 
