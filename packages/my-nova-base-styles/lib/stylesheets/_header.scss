@@ -18,7 +18,7 @@
   }
   @include medium-large{
     display: flex;
-    align-items: baseline;
+    align-items: center;
     .logo-text{
       margin-right: $hmargin;
     }
@@ -28,6 +28,8 @@
   }
   .tagline{
     font-size: 1.35rem;
+    color: #fff;
+    opacity: 0.4;
   }
 }
 
@@ -59,6 +61,8 @@
     background: none;
     img{
       margin-right: 5px;
+
+      display: none !important; // avatar
     }
   }
 }
